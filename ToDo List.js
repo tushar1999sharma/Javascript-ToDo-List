@@ -12,7 +12,7 @@ $("#new").on("click",function(){
 });
 
 $("#new").on("keypress",function(entry){
-    if(entry.which==13){
+    if(entry.which==13 && $("#new").val().length > 0){
         $("ul").append('<li><span class="trash"><i class="fa fa-trash" aria-hidden="true"></i></span>'+$("#new").val() + '</li>');
         $("#new").val("");
         reset();
